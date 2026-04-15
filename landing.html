@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fed65b",
+                    "secondary-fixed": "#ffe088",
+                    "surface-variant": "#e3e2e1",
+                    "on-primary-container": "#8fe2ba",
+                    "on-tertiary-fixed": "#0e1d26",
+                    "on-primary-fixed-variant": "#005137",
+                    "tertiary-fixed-dim": "#b9c9d5",
+                    "tertiary-fixed": "#d5e5f1",
+                    "surface-dim": "#dadad9",
+                    "secondary-fixed-dim": "#e9c349",
+                    "background": "#faf9f8",
+                    "surface-container": "#eeeeed",
+                    "primary-fixed-dim": "#84d7af",
+                    "tertiary": "#36454f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#c4d4e0",
+                    "on-primary-fixed": "#002114",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#bec9c1",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#a0f4ca",
+                    "surface-container-high": "#e9e8e7",
+                    "primary": "#004d34",
+                    "surface-tint": "#0b6c4b",
+                    "on-secondary-container": "#745c00",
+                    "primary-container": "#006747",
+                    "on-surface-variant": "#3f4943",
+                    "tertiary-container": "#4d5c66",
+                    "on-error-container": "#93000a",
+                    "secondary": "#735c00",
+                    "surface-bright": "#faf9f8",
+                    "inverse-on-surface": "#f1f0f0",
+                    "outline": "#6f7a72",
+                    "on-tertiary-fixed-variant": "#3a4953",
+                    "on-background": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#241a00",
+                    "surface": "#faf9f8",
+                    "on-surface": "#1a1c1c",
+                    "inverse-surface": "#2f3130",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-primary": "#84d7af",
+                    "surface-container-highest": "#e3e2e1",
+                    "surface-container-low": "#f4f3f2",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Plus Jakarta Sans", "sans-serif"],
+                    "label": ["Plus Jakarta Sans", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-italic { font-family: 'Newsreader'; font-style: italic; }
+        .textile-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 30-15 30L15 30z' fill='%23004d34' fill-opacity='0.03'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="bg-[#faf9f8] dark:bg-[#1a1c1c] opacity-80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none no-border tonal-shift-bg">
+<nav class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif italic text-[#004d34] dark:text-[#006747]">The Modern Griot</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#36454f] dark:text-[#f4f3f2] hover:text-[#004d34] hover:bg-[#f4f3f2] dark:hover:bg-[#36454f] transition-colors font-body text-sm tracking-wide" href="#">Gallery</a>
+<a class="text-[#36454f] dark:text-[#f4f3f2] hover:text-[#004d34] hover:bg-[#f4f3f2] dark:hover:bg-[#36454f] transition-colors font-body text-sm tracking-wide" href="#">Collections</a>
+<a class="text-[#36454f] dark:text-[#f4f3f2] hover:text-[#004d34] hover:bg-[#f4f3f2] dark:hover:bg-[#36454f] transition-colors font-body text-sm tracking-wide" href="#">Milestones</a>
+</div>
+<div class="flex items-center gap-4">
+<button id="create-event-btn" class="hidden md:flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-xl font-bold text-sm scale-95 active:scale-90 duration-200">
+                    Create Event
+                </button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary p-2 cursor-pointer hover:bg-surface-container-low rounded-full transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-primary p-2 cursor-pointer hover:bg-surface-container-low rounded-full transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-6 lg:px-12 py-20 textile-pattern">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 z-10">
+<span class="inline-block bg-secondary-fixed text-on-secondary-fixed-variant px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-6">Traditional Elegance</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-primary leading-[0.9] -tracking-[0.04em] mb-8">
+                        Capture Every <br/> <span class="serif-italic text-secondary">Moment</span> of Your Celebration.
+                    </h1>
+<p class="font-body text-lg md:text-xl text-tertiary max-w-lg mb-10 leading-relaxed">
+                        A classy way for your guests to share photos and videos from your special day, preserved in a digital heritage journal.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button id="hero-create-event-btn" class="bg-gradient-to-br from-primary to-primary-container text-white px-10 py-5 rounded-xl font-bold text-lg shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all active:scale-95">
+                            Create Your Event
+                        </button>
+<button class="border-2 border-primary/10 hover:bg-surface-container-low text-primary px-10 py-5 rounded-xl font-bold text-lg transition-all">
+                            View Gallery
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="grid grid-cols-2 gap-4 items-end">
+<div class="space-y-4">
+<img class="w-full aspect-[3/4] object-cover rounded-[2rem] shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500" data-alt="Close-up of a Nigerian bride in vibrant traditional attire with intricate gold jewelry and head-tie in warm cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlQmXGckqKKiDrM5MMhxQ5aP5Wss5N6k1_WSeltLPSnsa4_kGLdvcYwJJA-cqpO37Utwm5NB4YSFtVRCL8pkdPqvOclxAE3pHVeOOP45fLeH1_2upagt3ioXd2YzrfW6H38RyAgDluqvQkUKuL1Thdf0XvbzCz8OiY_eCEM-kRKCKMX-NEAGpY6LkaKiaChzYyYnR-JM2q0WfcGIogmuXxGDWhFUYPB0_Hts_8f-ZN4dSt91MHi2LzmMzL6kZ-t6PGlkqWqseg8gA"/>
+<div class="bg-secondary-container p-6 rounded-[2rem] transform translate-x-4">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<p class="mt-4 font-headline text-2xl text-on-secondary-container leading-tight">Every smile <br/>curated.</p>
+</div>
+</div>
+<div class="space-y-4 pb-12">
+<img class="w-full aspect-[4/5] object-cover rounded-[2rem] shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-500" data-alt="Joyful wedding guests dancing at a Nigerian celebration with colorful fabrics and bright daylight in an editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcmNX975kWlHK8XO8-bk54RyXJytxdcEKirMdfHzEieiM2hqo29EB2nE1CbCcuijxuDpQ3aTRJ4MN-dlkAjQG6qNxgN3y5xAT3Q-BjxOJWEDd_11OjcQPO9Bu-ymZZQJ-TuywZNFQSy--cHhMa0JA6xV2AL0fg-cSCpbge7VAYm-1uHMurHUyD3UmlYP-iTGu_aUGsFitvX7gX4o_vmj_CMqMWRYhmP5DfExG8AvHhui92RkV__XMjMqRmA61G_X7zrTZl8tnf_g0"/>
+<img class="w-full aspect-square object-cover rounded-[2rem] shadow-2xl" data-alt="Overhead shot of a beautifully decorated outdoor reception table with gold accents and green floral arrangements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJLGoHBAmZrGnsFJjNAJ49IbaVacJpjb6Ojz_NWQSZMmEOIoxz8r0Bhc7LUAE97nCbuUUrioWgSeEi21r10gcAnCHXp6G-uRctvfrc_S5G-HQxKvWpmjSAo2i7lQiCJn1p8Vxh45gK878ejoN4c147xs3-23pH9MraJoZhKXiIlYdRfBTaBGGft10s9Um5Hyfc7g0BnTGEv7psa1n9Z3ciH1f3nKN3hLwfagHfJcFkpRNiet9FAB1Kvyyj_6H_0gLUHq1bVOlMnFQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-5xl text-primary mb-6">Designed for Joyful Memories</h2>
+<p class="font-body text-tertiary max-w-2xl mx-auto">We combine modern technology with the timeless tradition of oral and visual history to make your event unforgettable.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Easy Sharing -->
+<div class="bg-surface-container-lowest p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-shadow duration-300">
+<div class="w-16 h-16 bg-primary-fixed-dim rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<h3 class="font-headline text-3xl text-primary mb-4">Easy Sharing</h3>
+<p class="text-tertiary leading-relaxed">Guests simply scan a custom QR code at your venue. No app downloads or account setups required to start uploading.</p>
+</div>
+<!-- Unlimited Uploads -->
+<div class="bg-surface-container-lowest p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-shadow duration-300">
+<div class="w-16 h-16 bg-secondary-fixed rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h3 class="font-headline text-3xl text-primary mb-4">Unlimited Uploads</h3>
+<p class="text-tertiary leading-relaxed">From the first dance to the final exit, capture every angle. We offer unrestricted storage for all your high-res photos and videos.</p>
+</div>
+<!-- High-Quality Downloads -->
+<div class="bg-surface-container-lowest p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-shadow duration-300">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="download_for_offline">download_for_offline</span>
+</div>
+<h3 class="font-headline text-3xl text-primary mb-4">High-Quality Downloads</h3>
+<p class="text-tertiary leading-relaxed">Preserve the beauty in its full glory. Download the entire gallery in original quality for professional printing and archiving.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Memory Cluster Showcase -->
+<section class="py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 relative h-[500px]">
+<img class="absolute top-0 left-0 w-3/5 aspect-[4/5] object-cover rounded-3xl shadow-2xl z-20 transform -translate-x-4" data-alt="Artistic capture of a couple holding hands with traditional Nigerian bracelets and fabrics in soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJwmHMdobeTNoVZdwvOp-gvWfeIKVAQshNxGYK5UEtfNlF120brYYVpjHcdk-yFwFFEYOaBuzsd-LQARNVh7OXbINPrK_tPcjzQRWlydz_0x3PdnYc-ueY8RugHa8C3G0u3FQUSF0jD85jYKzjKpcFUVhF8KngItKV2ktJMBXgOyxDK3oTC0aRKBbY9tiACen-YN_qyQ2YqWezXq0-TWcNeaqtDWSteu3GpmRtJoZJY4CSoGb8cKh7OgYxXrWN7W191peKS7U4NKY"/>
+<img class="absolute top-12 right-0 w-3/5 aspect-square object-cover rounded-3xl shadow-2xl z-10 border-8 border-background" data-alt="Beautifully prepared Nigerian feast on dark ceramic plates with warm ambient lighting in a high-end restaurant setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOlVCBnWliDelg-wLvCxOQBkWLnAS8I0f2SNqhl5wUUeLcfhKmVF9tgBR3LrU8RbH_uyoBRUaf3iVZI9cYAI5AHcTF9Kq1Etebw9F_TJ2uiZuo7Xqk23aIlIkOFdEEiXs0MzglogtB5nJ5-lQ2vV3gTkFo6XPIYbC1E0eZaMcnu74MIwahTxkFf1sCrrWSiDdjbYQbb-oohfm1L2GodTTtQkDsrBTs423NDr7x9F2zcsAC3MOvhrOgVoqyUqsMQSYHpvOXt5wb2_4"/>
+<img class="absolute bottom-0 right-12 w-1/2 aspect-[4/3] object-cover rounded-3xl shadow-2xl z-30 transform translate-y-8" data-alt="Dynamic shot of a live music performance at a celebration with warm stage lights and crowd in silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk_3f5MXbb7OtQC67V9zvDWWm_tStT4P4G9enHGAEk0VJAWLCuxWFxxwh8ycuSvMMeoJWhAimzqfut6JZHV-KUksHDUFF2NPldEWu4skmBTF8ppcG7G8JtOI1IZ_dDxLLEonXQ7ObkK_zgJvvbWXFAGIm5p_d_sJGerrHKL-HGedlrZ3p-bf4_IF-wehWkDp8MonhfV-6k0ULVUoXjvIdC_AoIqtmxn4EdYDiiRR2tBsgMkVfFJNLQv1uE0VqseZFgH3RoC9i2Sbg"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-headline text-5xl text-primary mb-8 leading-tight">Your Digital Heirloom, <br/><span class="serif-italic">Curation Perfected.</span></h2>
+<p class="text-lg text-tertiary mb-10 leading-relaxed">Unlike cluttered social feeds, The Modern Griot organizes your celebration into a beautiful, ad-free editorial gallery. It's a digital space as elegant as the event itself.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<h4 class="font-bold text-primary">Private &amp; Secure</h4>
+<p class="text-tertiary text-sm">Only your invited guests can view or contribute to your curated collection.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<div>
+<h4 class="font-bold text-primary">Collaborative Storytelling</h4>
+<p class="text-tertiary text-sm">Guests can add heartfelt notes and captions to the photos they share.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary text-white text-center relative overflow-hidden mx-6 lg:mx-12 rounded-[3rem] mb-24">
+<div class="absolute inset-0 textile-pattern opacity-10"></div>
+<div class="relative z-10 max-w-3xl mx-auto px-6">
+<h2 class="font-headline text-5xl md:text-6xl mb-8 leading-tight">Ready to preserve your legacy?</h2>
+<p class="text-on-primary-container text-lg md:text-xl mb-12 opacity-90">Join hundreds of couples and families who have used The Modern Griot to immortalize their celebrations.</p>
+<button class="bg-secondary text-white px-12 py-5 rounded-xl font-bold text-xl hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors shadow-2xl">
+                    Get Started for Free
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#36454f] dark:bg-[#1a1c1c] w-full py-12 px-8 tonal-shift-dark">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto text-center md:text-left">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-serif text-[#735c00]">The Modern Griot</div>
+<p class="font-sans text-sm tracking-tight text-[#faf9f8]">© 2024 The Modern Griot. Honoring Nigerian Heritage.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-sans text-sm tracking-tight text-[#f4f3f2]/70 hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="font-sans text-sm tracking-tight text-[#f4f3f2]/70 hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="font-sans text-sm tracking-tight text-[#f4f3f2]/70 hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Our Story</a>
+<a class="font-sans text-sm tracking-tight text-[#f4f3f2]/70 hover:text-white transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#f4f3f2]/70 cursor-pointer hover:text-[#735c00]" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-[#f4f3f2]/70 cursor-pointer hover:text-[#735c00]" data-icon="instagram">retweet</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#faf9f8] dark:bg-[#1a1c1c] z-50 rounded-t-3xl shadow-[0_-4px_24px_rgba(0,77,52,0.06)] border-t border-[#f4f3f2]/15">
+<div class="flex flex-col items-center justify-center bg-[#004d34] text-white rounded-xl p-2 scale-105 transition-transform duration-300 ease-out">
+<span class="material-symbols-outlined" data-icon="auto_stories" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#36454f] dark:text-[#f4f3f2] p-2 hover:bg-[#f4f3f2]">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#36454f] dark:text-[#f4f3f2] p-2 hover:bg-[#f4f3f2]">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Create</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#36454f] dark:text-[#f4f3f2] p-2 hover:bg-[#f4f3f2]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Profile</span>
+</div>
+</nav>
+</nav>
+
+<!-- Auth Modal (Hidden by default) -->
+<div id="auth-modal" class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-surface-container-lowest w-full max-w-md rounded-3xl p-8 shadow-2xl relative border border-outline-variant/20">
+        <button id="close-auth-modal" class="absolute top-4 right-4 text-tertiary hover:text-error transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span class="material-symbols-outlined text-primary text-3xl" data-icon="vpn_key">vpn_key</span>
+            </div>
+            <h2 id="auth-title" class="font-headline text-3xl text-primary font-bold">Welcome Back</h2>
+            <p class="text-tertiary text-sm mt-2">Sign in to manage your milestones.</p>
+        </div>
+        <form id="auth-form" class="space-y-6">
+            <div>
+                <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2">Email Address</label>
+                <input type="email" name="email" required class="w-full bg-surface-container-low border-b-2 border-outline-variant py-3 px-4 text-lg focus:outline-none focus:border-primary focus:ring-0 transition-colors" placeholder="you@example.com">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2">Password</label>
+                <input type="password" name="password" required class="w-full bg-surface-container-low border-b-2 border-outline-variant py-3 px-4 text-lg focus:outline-none focus:border-primary focus:ring-0 transition-colors" placeholder="••••••••">
+            </div>
+            <div id="auth-error" class="hidden text-error bg-error-container text-on-error-container p-3 rounded-xl text-sm font-medium text-center"></div>
+            <button id="auth-submit" type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-primary-container transition-colors shadow-lg active:scale-[0.98]">
+                Log In
+            </button>
+        </form>
+        <div class="mt-6 text-center">
+            <a href="#" id="auth-mode-toggle" class="text-tertiary text-sm hover:text-primary transition-colors">
+                Don't have an account? <span class="font-bold underline">Sign up</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module" src="./js/auth.js"></script>
+</body></html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#fed65b",
+                    "secondary-fixed": "#ffe088",
+                    "surface-variant": "#e3e2e1",
+                    "on-primary-container": "#8fe2ba",
+                    "on-tertiary-fixed": "#0e1d26",
+                    "on-primary-fixed-variant": "#005137",
+                    "tertiary-fixed-dim": "#b9c9d5",
+                    "tertiary-fixed": "#d5e5f1",
+                    "surface-dim": "#dadad9",
+                    "secondary-fixed-dim": "#e9c349",
+                    "background": "#faf9f8",
+                    "surface-container": "#eeeeed",
+                    "primary-fixed-dim": "#84d7af",
+                    "tertiary": "#36454f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#c4d4e0",
+                    "on-primary-fixed": "#002114",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#bec9c1",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#a0f4ca",
+                    "surface-container-high": "#e9e8e7",
+                    "primary": "#004d34",
+                    "surface-tint": "#0b6c4b",
+                    "on-secondary-container": "#745c00",
+                    "primary-container": "#006747",
+                    "on-surface-variant": "#3f4943",
+                    "tertiary-container": "#4d5c66",
+                    "on-error-container": "#93000a",
+                    "secondary": "#735c00",
+                    "surface-bright": "#faf9f8",
+                    "inverse-on-surface": "#f1f0f0",
+                    "outline": "#6f7a72",
+                    "on-tertiary-fixed-variant": "#3a4953",
+                    "on-background": "#1a1c1c",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#241a00",
+                    "surface": "#faf9f8",
+                    "on-surface": "#1a1c1c",
+                    "inverse-surface": "#2f3130",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-primary": "#84d7af",
+                    "surface-container-highest": "#e3e2e1",
+                    "surface-container-low": "#f4f3f2",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-auto-rows: 200px;
+            grid-auto-flow: dense;
+        }
+        .item-tall { grid-row: span 2; }
+        .item-wide { grid-column: span 2; }
+        .memory-hover:hover .download-overlay { opacity: 1; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-[#faf9f8] dark:bg-[#1a1c1c] opacity-80 backdrop-blur-md text-[#004d34] dark:text-[#006747] docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif italic text-[#004d34] dark:text-[#006747]">The Modern Griot</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#735c00] font-bold border-b-2 border-[#735c00] pb-1 font-body" href="#">Gallery</a>
+<a class="text-[#36454f] dark:text-[#f4f3f2] hover:text-[#004d34] hover:bg-[#f4f3f2] dark:hover:bg-[#36454f] transition-colors font-body" href="#">Collections</a>
+<a class="text-[#36454f] dark:text-[#f4f3f2] hover:text-[#004d34] hover:bg-[#f4f3f2] dark:hover:bg-[#36454f] transition-colors font-body" href="#">Milestones</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-xl font-bold scale-95 active:scale-90 duration-200 transition-all shadow-md">
+                    Create Event
+                </button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined p-2 rounded-full hover:bg-[#f4f3f2] dark:hover:bg-[#36454f] transition-colors cursor-pointer">notifications</span>
+<span class="material-symbols-outlined p-2 rounded-full hover:bg-[#f4f3f2] dark:hover:bg-[#36454f] transition-colors cursor-pointer">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-6 py-12 md:px-12">
+<!-- Header Section -->
+<section class="mb-16 text-center md:text-left">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<span id="gallery-type" class="text-secondary font-label font-bold uppercase tracking-widest text-sm mb-4 block">Event Memories</span>
+<h1 id="gallery-title" class="text-5xl md:text-7xl font-headline italic -tracking-[0.02em] leading-tight text-primary">
+                        Loading Event... <br/>
+<span id="gallery-date" class="not-italic text-tertiary"></span>
+</h1>
+<p class="mt-6 text-on-surface-variant max-w-xl text-lg leading-relaxed">
+                        A communal digital tapestry of love, tradition, and celebration. Contribute your perspective to the family legacy.
+                    </p>
+</div>
+<!-- Primary Action: Upload -->
+<div class="w-full md:w-auto">
+<label for="file-upload" class="group relative bg-surface-container-low border-2 border-dashed border-outline-variant p-8 rounded-full flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container transition-all hover:border-primary">
+<div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-xl">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+</div>
+<span class="text-primary font-bold">Upload Your Memories</span>
+<p class="text-xs text-on-surface-variant mt-1">Tap to browse</p>
+<input id="file-upload" type="file" multiple accept="image/*" class="hidden" />
+</label>
+<div id="upload-status" class="mt-2 text-center text-sm font-medium text-primary hidden">Uploading...</div>
+</div>
+</div>
+</section>
+<!-- Memory Gallery Grid -->
+<div id="gallery-grid" class="asymmetric-grid gap-6 mb-24">
+<!-- Gallery Item 1: Wide Feature -->
+<div class="item-wide memory-hover relative overflow-hidden rounded-full shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="large vibrant Nigerian wedding reception with guests in colorful traditional attire dancing under warm golden lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHAJJccUigUVrhT5Ldrp2yJ4qoo1i6rT5EiCHKH6eG_GEKQYrJJxV4nXKDktZTldp250CDDom5yJWNRQCQfJDDxInbEILDUNu6VSexGUUi90aoIwH85eB2vFxA2QzaGjjrZjY6kY-I0sgXKInPIPwCWdX3jZQjNrdSt3G9F1R2stsKHS5DfQhYA9I-Crj6Enc4misZj27eccJVQ8riCU2bn4kMob9pHdPP0CrKu7AjIkFaQb_aPErhl_z6hl-VfpuFyoD768yOqtc"/>
+<div class="download-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-start justify-end p-6 pointer-events-none group-hover:pointer-events-auto">
+<button class="bg-surface-container-lowest/90 text-primary p-3 rounded-full shadow-lg hover:bg-white transition-all pointer-events-auto">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+<p class="text-sm font-label font-medium">Captured by Bolanle</p>
+</div>
+</div>
+<!-- Gallery Item 2: Tall -->
+<div class="item-tall memory-hover relative overflow-hidden rounded-full shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="portrait of a woman in elaborate golden headwrap and green lace dress smiling at a celebration with soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjjxtK4que_Yb2JgCuKisENaSqwKTWLc8VEDkJmfZkSnHyeAMVXNNG8c_09Rot_8krDXuyAxvtFGPPfyhsjHnB9A0VpG0eCi62RNAd0m9oALX1GoJ9vr_yn7UYy834fq8mpaigqsMBOXdlx0GPwx3VgZs6uwiMxHvFBsCQyiLi_fmKaoCGm4ba--dJp42udoc0ZN8_ByTSUx-F8uO_ZTyg_nr542EupkDDSayJYQXRWZLQO9Oea8R3QWR6DXj_IgwphrpOf8fkIe0"/>
+<div class="download-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-start justify-end p-6 pointer-events-none group-hover:pointer-events-auto">
+<button class="bg-surface-container-lowest/90 text-primary p-3 rounded-full shadow-lg hover:bg-white transition-all pointer-events-auto">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Gallery Item 3: Regular -->
+<div class="memory-hover relative overflow-hidden rounded-full shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close up of traditional West African beaded jewelry and luxury fabric textures at a festive event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2IwHCLK8JYjg69mJtl7Msv6vr97w4F9YGjx-vilA8fVs--iqGIEI6ciB3ctVRFvolDB0ZLyxXGL0_hEtPyCbZQtIm7vQG1l_j1mP2Yzg63Po9aofWjflDG2cmstF4wdo4iYukLMA5pE2JVedCIHjJJahibpsvE0b_UNXBuKRy-6n2TQq-sPRaZ5HOtkUeDMgSJK_sKAJoWp1zM_qUN7aoBTqTT809EArV-Rd-Or6Jp7R-sum0xYxH8dUEYid1wFu4HxtCeQH_Ibc"/>
+<div class="download-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-start justify-end p-4 pointer-events-none group-hover:pointer-events-auto">
+<button class="bg-surface-container-lowest/90 text-primary p-2 rounded-full shadow-lg hover:bg-white transition-all pointer-events-auto">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Gallery Item 4: Regular -->
+<div class="memory-hover relative overflow-hidden rounded-full shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="joyful group of people laughing together during an outdoor party at dusk with strings of warm cafe lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpfo6xp1kf1Mbggn4UlCt-iZM2aWkej_fVBDqh8E6AmBXy2gO6YuX71LV9wkTCg-eIeZJRSXbA4YYcSOQRaotkhRl5PzwhdqFSr-OBWJmqoIXujiOtURkyeHka-QnEw4LZjtVAmfJJT0GGGonl0AT18RNCiOSdGEv05MiQqa2QDK-muAI-nH6ru-7sO_4oSu0rx5l0llQxFN1-r4bHY7UIf1F2QSz6pLgMB6zjjhiCfLN6KIbIvyjyjQnLm9pm7Xq8uZ55GIiu_Oc"/>
+<div class="download-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-start justify-end p-4 pointer-events-none group-hover:pointer-events-auto">
+<button class="bg-surface-container-lowest/90 text-primary p-2 rounded-full shadow-lg hover:bg-white transition-all pointer-events-auto">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Gallery Item 5: Tall -->
+<div class="item-tall memory-hover relative overflow-hidden rounded-full shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="candid moment of children playing during a traditional Nigerian ceremony with vibrant green grass background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByWMzmMmvsFuZu8Eq_P8mtAZ7108xlCvwdhtgbxqChAnIYRbreJfjN4Z7MERL3tBqXHUCJ5dazP0_f-2G2Ojm6Ot-MLw_qBRVw5XmCBnDVW0DSNIICHXnN43u0XAlx9RZYfuzRwa_xAeJph-dyDDS82dqDaoKNqBe8Pun0_h9Hwea8TMSaYMEE9b5X4twWk_RiLS2oZPzN_TuoyW1N3n-2VavoD79_I_52nRQ6y5GXtaMXThA9E5LfmD3iu_3LpBhOCNUvfOn_x3M"/>
+<div class="download-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-start justify-end p-6 pointer-events-none group-hover:pointer-events-auto">
+<button class="bg-surface-container-lowest/90 text-primary p-3 rounded-full shadow-lg hover:bg-white transition-all pointer-events-auto">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Gallery Item 6: Wide -->
+<div class="item-wide memory-hover relative overflow-hidden rounded-full shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="lavish dinner table set with gold cutlery emerald green napkins and white floral centerpieces in a luxury ballroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCGBol5v-AxegTmXItWWRJs7W_dovXJHLKd4J-n56WlXmSTdUPGwsWD3zogaRQX8mWiiLX8GtN-70MjUWmi3bacpwhz_-NX2uNjfoDKNOiYCF-Q-zwKlKjziek13xagv3IBLYHhwpJJUyu6fH7AKzcCXmyDHjDA5R4vYUhn3ej0vMXwG_j8pcTI4ycsHLrerkMHM7-Rn_kuBCuCbcEOD9bqN2dQZr7mRDNET56Keo_R5rcs2-meAukUSmf1fQ1JVrhcvCV-8PbiOE"/>
+<div class="download-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-start justify-end p-6 pointer-events-none group-hover:pointer-events-auto">
+<button class="bg-surface-container-lowest/90 text-primary p-3 rounded-full shadow-lg hover:bg-white transition-all pointer-events-auto">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Gallery Item 7: Regular -->
+<div class="memory-hover relative overflow-hidden rounded-full shadow-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close up of delicious Nigerian party food served on elegant ceramic plates with colorful garnishes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBqS9J5rBWgIX9MMMIe3ayI1jAgDl89zw_krZEc6CVbDItmKu88F78do5WeDWLwBD7EqHMZSHPlNZHf0vbuOqTqJAgnH8GswCTTGpiMgyIBtYfwwJpaD8XITaybQKP7x08Yg1C6fXk6Lfkw7KEiRhNdpwvTrpHbHrMQiba-tK8YlLg_KIaJ3hAjXblja_g08V4SesgWkgZpuhobNCVHX1l6XQ0gR6bJ6rXfW7obHGx0ak5FbCJak5qCzIbYFW-Mrz25fArKJ0FT5M"/>
+<div class="download-overlay absolute inset-0 bg-primary/20 opacity-0 transition-opacity flex items-start justify-end p-4 pointer-events-none group-hover:pointer-events-auto">
+<button class="bg-surface-container-lowest/90 text-primary p-2 rounded-full shadow-lg hover:bg-white transition-all pointer-events-auto">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Heritage Accent -->
+<div class="w-full py-24 flex flex-col items-center justify-center text-center bg-surface-container-low rounded-full px-8 relative overflow-hidden">
+<!-- Subtle Textile SVG Background Mockup -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#004d34 2px, transparent 2px); background-size: 32px 32px;"></div>
+<h2 class="text-4xl font-headline italic text-primary mb-6">More than just photos</h2>
+<p class="max-w-2xl text-tertiary mb-8 font-body">Every image shared contributes to the lasting story of the Adeleke family. These memories will be curated into a physical limited-edition heritage book.</p>
+<div class="flex gap-4">
+<button class="text-primary font-bold underline decoration-2 underline-offset-4 hover:text-secondary transition-colors font-body uppercase text-sm tracking-widest">View Guestbook</button>
+<button class="text-primary font-bold underline decoration-2 underline-offset-4 hover:text-secondary transition-colors font-body uppercase text-sm tracking-widest">Share Gallery</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#36454f] dark:bg-[#1a1c1c] w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto text-center md:text-left">
+<div class="text-lg font-serif text-[#735c00]">The Modern Griot</div>
+<p class="text-[#faf9f8] font-sans text-sm tracking-tight opacity-80">© 2024 The Modern Griot. Honoring Nigerian Heritage.</p>
+<div class="flex gap-6">
+<a class="text-[#f4f3f2]/70 hover:text-white transition-colors font-sans text-sm" href="#">Terms</a>
+<a class="text-[#f4f3f2]/70 hover:text-white transition-colors font-sans text-sm" href="#">Privacy</a>
+<a class="text-[#f4f3f2]/70 hover:text-white transition-colors font-sans text-sm" href="#">Our Story</a>
+<a class="text-[#f4f3f2]/70 hover:text-white transition-colors font-sans text-sm" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#faf9f8] dark:bg-[#1a1c1c] flex justify-around items-center px-4 pb-6 pt-2 z-50 rounded-t-3xl shadow-[0_-4px_24px_rgba(0,77,52,0.06)] border-t border-[#f4f3f2]/15">
+<div class="flex flex-col items-center justify-center text-[#36454f] dark:text-[#f4f3f2] p-2 hover:bg-[#f4f3f2] transition-transform duration-300 ease-out scale-105">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#004d34] text-white rounded-xl p-2 transition-transform duration-300 ease-out scale-105">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#36454f] dark:text-[#f4f3f2] p-2 hover:bg-[#f4f3f2] transition-transform duration-300 ease-out scale-105">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Create</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#36454f] dark:text-[#f4f3f2] p-2 hover:bg-[#f4f3f2] transition-transform duration-300 ease-out scale-105">
+<span class="material-symbols-outlined">person</span>
+<span class="font-sans text-[10px] font-medium tracking-wide">Profile</span>
+</div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module" src="./js/gallery.js"></script>
+</body></html>
