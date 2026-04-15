@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     if (!user) {
         alert("You must be logged in to view the dashboard.");
-        window.location.href = 'landing.html';
+        window.location.href = 'index.html';
         return;
     }
 
